@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="duaName1">Дуои субҳ</string>
+    <string name="duaName2">Дуои баъд аз хоб хестан</string>
+    <string name="duaName3">Дуо ҳангоми пушидани либос</string>
+    <string name="duaName4">Дуо ҳангоми ба ҳоҷатхона даромадан</string>
+    <string name="duaName5">Дуои аз ҳоҷатхона баромадан</string>
+    <string name="duaName6">Дуои пеш аз хурок хурдан</string>
+    <string name="duaName7">Дуо баъд аз хурок хурдан</string>
+    <string name="duaName8">Дуо ҳангоми баромадан аз хона</string>
+    <string name="duaName9">Дуо ҳангоми даромадан ба хона</string>
+    <string name="duaName10">Дуои баъд аз анҷоми таҳорат</string>
+    <string name="duaName11">Дуои баъди азон</string>
+    <string name="duaName12">Дуои "ат-Таҳиййот"</string>
+    <string name="duaName13">Дуо ва тасбеҳҳое, ки баъди намоз хонда мешавад</string>
+    <string name="duaName14">Дуои қунут</string>
+    <string name="duaName15">Дуои даромадан ба масҷид</string>
+    <string name="duaName16">Дуо ҳангоми савор шудан ба нақлиёт</string>
+    <string name="duaName17">Дуо ҳангоми хабар гирифтани бемори</string>
+    <string name="duaName18">Дуои васваса</string>
+    <string name="duaName19">Дуо ҳангоми касеро бини, ки ба балое гирифтор шудааст</string>
+    <string name="duaName20">Дуо ҳангоми хоби ваҳшату тарс дидан</string>
+    <string name="duaName21">Дуои ғаму андуҳ</string>
+    <string name="duaName22">Дуо ҳангоми рубару шудани душман</string>
+    <string name="duaName23">Дуо ҳангоми рубару шудан ба кори мушкил</string>
+    <string name="duaName24">Дуо ҳангоми аз пардохти қарз нотавон мондан</string>
+    <string name="duaName25">Дуо ҳангоми касе бароямон хидмате кунад</string>
+    <string name="duaName26">Дуои меҳмон барои соҳиби хона</string>
+    <string name="duaName27">Дуо барои касе, ки издивоҷ кардааст</string>
+    <string name="duaName28">Дуои барои фарзандонро ҳифз намудан</string>
+    <string name="duaName29">Дуои шахсе, ки бар ӯ мусибате расида бошад</string>
+    <string name="duaName30">Дуои зиёрати қабристон</string>
+    <string name="duaName31">Дуо ҳангоми шунидани раъду барқ</string>
+    <string name="duaName32">Дуо ҳангоми боридани борон</string>
+    <string name="duaName33">Дуои қабл аз ҳамхобагӣ намудан бо ҳамсар</string>
+    <string name="duaName34">Дуо ҳангоми хоб намудан</string>
+    <string name="duaName35">Дуои тасаллияту ҳамдарди гуфтан</string>
+    <string name="duaName36">Дуои ҳангоми забҳи чорво</string>
+    <string name="duaName37">Дуои фоли бад задан ба чизе</string>
+    <string name="duaName38">Дуо барои касе, ки дашномаш додаӣ</string>
+    <string name="duaName39">Дуои ҳангоми даромадан ба бозор</string>
+    <string name="duaName40">Дуои ҳангоми дучори шакку шубҳа шудан дар имон</string>
+    <string name="duaName41">Дуои истихора</string>
+    <string name="duaName42">Дуои баъд аз ба хок супоридани маййит</string>
+    <string name="duaName43">Дуоҳои ғаму андуҳ аз Қуръону Суннат</string>
+    <string name="duaName44">Дуои баромадан аз масҷид</string>
+</resources>

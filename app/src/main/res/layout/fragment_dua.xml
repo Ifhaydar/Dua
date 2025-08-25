@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/black"
     android:padding="12dp"
-    tools:context=".DuaActivity">
+    tools:context=".fragments.DuaFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/arabContainer"
