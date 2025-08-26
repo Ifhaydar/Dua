@@ -1,37 +1,36 @@
 package com.example.dua
 
+import android.os.Build
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dua.databinding.ItemDuaBinding
 
-class DuaAdapter(private val listDua: ArrayList<Dua>, private val listener: Listener): RecyclerView.Adapter<DuaAdapter.DuaViewHolder>() {
-    inner class DuaViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        fun bind(dua: Dua, listener: Listener, duaDesc: DuaDesc) {
-            val tvNumberDua = itemView.findViewById<TextView>(R.id.tv_number)
-            val tvDuaName = itemView.findViewById<TextView>(R.id.tv_dua)
+class DuaAdapter(
+    private val listDua: List<Dua>,
+    val onItemClick: (Dua) -> Unit
+): RecyclerView.Adapter<DuaAdapter.DuaViewHolder>() {
+    class DuaViewHolder(private val binding: ItemDuaBinding): RecyclerView.ViewHolder(binding.root) {
+        fun bind(dua: Dua, onItemClick: (Dua) -> Unit) {
+            binding.tvNumber.text = dua.id.toString()
+            binding.tvDua.text = dua.duaName
 
-            tvNumberDua.text = dua.numberDua.toString()
-            tvDuaName.text = dua.duaName
-
-            itemView.setOnClickListener {
-                listener.onClick(duaDesc)
+            binding.root.setOnClickListener {
+                onItemClick(dua)
             }
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DuaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_dua, parent, false)
+        val view = ItemDuaBinding.inflate(parent.context.getSystemService(LayoutInflater::class.java), parent, false)
         return DuaViewHolder(view)
     }
 
     override fun getItemCount(): Int  = listDua.size
 
     override fun onBindViewHolder(holder: DuaViewHolder, position: Int) {
-        holder.bind(listDua[position])
-    }
-    interface Listener {
-        fun onClick(duaDesc: DuaDesc)
+        holder.bind(listDua[position], onItemClick)
     }
 }

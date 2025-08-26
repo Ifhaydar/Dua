@@ -18,5 +18,12 @@
         android:id="@+id/duaFragment"
         android:name="com.example.dua.fragments.DuaFragment"
         android:label="fragment_dua"
-        tools:layout="@layout/fragment_dua" />
+        tools:layout="@layout/fragment_dua" >
+        <argument
+            android:name="textDuaArab"
+            app:argType="string" />
+        <argument
+            android:name="textDuaTajik"
+            app:argType="string" />
+    </fragment>
 </navigation>
