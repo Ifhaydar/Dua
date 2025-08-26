@@ -9,23 +9,11 @@
     android:background="@color/black"
     tools:context=".fragments.HomeFragment">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:text="Дуоҳои зарурӣ"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:background="#414045"
-        android:textColor="@color/white"
-        android:gravity="center_vertical"
-        android:padding="12dp" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        tools:listitem="@layout/item_dua"/>
+        android:padding="12dp"
+        tools:listitem="@layout/item_dua" />
 
 </LinearLayout>

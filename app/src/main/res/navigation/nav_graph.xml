@@ -8,7 +8,6 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.dua.fragments.HomeFragment"
-        android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_duaFragment"
@@ -17,6 +16,12 @@
     <fragment
         android:id="@+id/duaFragment"
         android:name="com.example.dua.fragments.DuaFragment"
-        android:label="fragment_dua"
-        tools:layout="@layout/fragment_dua" />
+        tools:layout="@layout/fragment_dua" >
+        <argument
+            android:name="textDuaArab"
+            app:argType="string" />
+        <argument
+            android:name="textDuaTajik"
+            app:argType="string" />
+    </fragment>
 </navigation>
