@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        supportActionBar?.title = "Дуо"
+        supportActionBar?.title = "Дуоҳо"
     }
 
     override fun onSupportNavigateUp(): Boolean {

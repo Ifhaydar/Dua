@@ -76,7 +76,7 @@ class HomeFragment : Fragment() {
                 Dua(44, getString(R.string.duaName44), getString(R.string.duaDescArab44), getString(R.string.duaDescTajik44), false)
 
             ), { dua ->
-                val action = HomeFragmentDirections.actionHomeFragmentToDuaFragment(dua.duaDescArab, dua.duaDescTajik)
+                val action = HomeFragmentDirections.actionHomeFragmentToDuaFragment(dua.duaDescArab, dua.duaDescTajik, dua.duaName)
                 findNavController().navigate(action)
             }
         )
