@@ -32,11 +32,14 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        supportActionBar?.title = "Дуоҳо"
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragmentContainerView)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    fun updateToolbarTitle (title: String){
+        binding.tvTitleToolbar.text = title
     }
 }

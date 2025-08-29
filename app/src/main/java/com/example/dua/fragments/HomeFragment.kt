@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dua.Dua
 import com.example.dua.DuaAdapter
+import com.example.dua.MainActivity
 import com.example.dua.R
 import com.example.dua.databinding.FragmentHomeBinding
 
@@ -80,6 +81,8 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(action)
             }
         )
+
+        (requireActivity() as MainActivity).updateToolbarTitle("Дуоҳо")
 
         return binding!!.root
     }

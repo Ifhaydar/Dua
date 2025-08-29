@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.navArgs
+import com.example.dua.MainActivity
 import com.example.dua.R
 import com.example.dua.databinding.FragmentDuaBinding
 
@@ -25,7 +26,8 @@ class DuaFragment : Fragment() {
 
         binding?.tvDuaArab?.text = safeArgs.textDuaArab
         binding?.tvDuaTajik?.text = safeArgs.textDuaTajik
-        (requireActivity() as AppCompatActivity).supportActionBar?.title = safeArgs.textDuaTitle
+       (requireActivity() as MainActivity).updateToolbarTitle(safeArgs.textDuaTitle)
         return binding!!.root
     }
+
 }

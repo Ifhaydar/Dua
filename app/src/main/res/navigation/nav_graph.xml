@@ -8,11 +8,16 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.dua.fragments.HomeFragment"
-        android:label="Дуоҳо"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_duaFragment"
             app:destination="@id/duaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tasbihFragment"
+            app:destination="@id/tasbihFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_favoriteFragment2"
+            app:destination="@id/favoriteFragment2" />
     </fragment>
     <fragment
         android:id="@+id/duaFragment"
@@ -27,4 +32,14 @@
         <argument android:name="textDuaTitle"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/tasbihFragment"
+        android:name="com.example.dua.fragments.TasbihFragment"
+        android:label="fragment_tasbih"
+        tools:layout="@layout/fragment_tasbih" />
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="com.example.dua.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
 </navigation>
