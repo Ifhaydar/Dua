@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Dua" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Цвет иконок Toolbar -->
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Цвет иконки "Назад" -->
+        <item name="colorControlNormal">@color/white</item>
+
+        <!-- Цвет иконок меню -->
+        <item name="android:textColorSecondary">@color/white</item>
+
     </style>
 
     <style name="Theme.Dua" parent="Base.Theme.Dua" />
+
 </resources>

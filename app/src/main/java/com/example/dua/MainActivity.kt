@@ -1,7 +1,12 @@
 package com.example.dua
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
 import android.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +20,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.transition.Visibility
 import com.example.dua.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +38,45 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.homeFragment -> {
+                    (this as AppCompatActivity).supportActionBar?.show()
+                    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                }
+                R.id.tasbihFragment -> {
+                    (this as AppCompatActivity).supportActionBar?.hide()
+                    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+                }
+                R.id.favoriteFragment -> {
+                    (this as AppCompatActivity).supportActionBar?.hide()
+                    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                }
+                else -> {
+                    (this as AppCompatActivity).supportActionBar?.show()
+                    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                }
+            }
+        }
+
+        binding.bottomNavigationView.setupWithNavController(navController)
+
+        binding.bottomNavigationView.setOnItemSelectedListener {item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    navController.navigate(R.id.homeFragment)
+                    true
+                }
+                R.id.nav_tasbih -> {
+                    navController.navigate(R.id.tasbihFragment)
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -41,5 +86,22 @@ class MainActivity : AppCompatActivity() {
 
     fun updateToolbarTitle (title: String){
         binding.tvTitleToolbar.text = title
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_share -> {
+                true
+            }
+            R.id.action_evaluate -> {
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

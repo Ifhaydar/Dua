@@ -3,18 +3,12 @@
 
     <item
         android:title="Дуоҳо"
-        android:id="@+id/homeFragment"
+        android:id="@+id/nav_home"
         android:icon="@drawable/dua" />
 
     <item
         android:title="Тасбеҳ"
-        android:id="@+id/tasbihFragment"
+        android:id="@+id/nav_tasbih"
         android:icon="@drawable/tasbih"/>
-
-    <item
-        android:title="Интихобшуда"
-        android:id="@+id/favoriteFragment"
-        android:icon="@drawable/favorite"/>
-
 
 </menu>

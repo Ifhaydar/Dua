@@ -5,5 +5,4 @@ data class Dua(
     val duaName: String,
     val duaDescArab: String,
     val duaDescTajik: String,
-    val favorite: Boolean
 )
