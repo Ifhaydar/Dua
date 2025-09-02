@@ -15,9 +15,6 @@
         <action
             android:id="@+id/action_homeFragment_to_tasbihFragment"
             app:destination="@id/tasbihFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_favoriteFragment"
-            app:destination="@id/favoriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/duaFragment"
@@ -36,9 +33,4 @@
         android:id="@+id/tasbihFragment"
         android:name="com.example.dua.fragments.TasbihFragment"
         tools:layout="@layout/fragment_tasbih" />
-    <fragment
-        android:id="@+id/favoriteFragment"
-        android:name="com.example.dua.fragments.FavoriteFragment"
-        tools:layout="@layout/fragment_favorite" >
-    </fragment>
 </navigation>

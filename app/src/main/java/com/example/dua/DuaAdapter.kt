@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dua.databinding.ItemDuaBinding
 
 class DuaAdapter(
-    private val listDua: List<Dua>,
+    private var listDua: List<Dua>,
     val onItemClick: (Dua) -> Unit
 ): RecyclerView.Adapter<DuaAdapter.DuaViewHolder>() {
     class DuaViewHolder(private val binding: ItemDuaBinding): RecyclerView.ViewHolder(binding.root) {
@@ -22,6 +22,7 @@ class DuaAdapter(
         }
     }
 
+
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DuaViewHolder {
         val view = ItemDuaBinding.inflate(parent.context.getSystemService(LayoutInflater::class.java), parent, false)
@@ -29,6 +30,11 @@ class DuaAdapter(
     }
 
     override fun getItemCount(): Int  = listDua.size
+
+    fun updateList(newList: List<Dua>) {
+        listDua = newList
+        notifyDataSetChanged() // Уведомляем адаптер об изменениях
+    }
 
     override fun onBindViewHolder(holder: DuaViewHolder, position: Int) {
         holder.bind(listDua[position], onItemClick)

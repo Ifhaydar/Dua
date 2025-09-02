@@ -1,26 +1,15 @@
 package com.example.dua
 
-import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.ImageView
-import android.widget.Toolbar
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.transition.Visibility
 import com.example.dua.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -50,17 +39,12 @@ class MainActivity : AppCompatActivity() {
                     (this as AppCompatActivity).supportActionBar?.hide()
                     requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
                 }
-                R.id.favoriteFragment -> {
-                    (this as AppCompatActivity).supportActionBar?.hide()
-                    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
-                }
                 else -> {
                     (this as AppCompatActivity).supportActionBar?.show()
                     requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
                 }
             }
         }
-
         binding.bottomNavigationView.setupWithNavController(navController)
 
         binding.bottomNavigationView.setOnItemSelectedListener {item ->
@@ -88,11 +72,6 @@ class MainActivity : AppCompatActivity() {
         binding.tvTitleToolbar.text = title
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.toolbar_menu, menu)
-        return true
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_share -> {
@@ -104,4 +83,5 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }
